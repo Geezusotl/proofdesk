@@ -1,0 +1,1159 @@
+{
+ "description": "Questions about the bundled sample handbook. 'dev' questions were used to choose thresholds; 'held_out' ones were written afterwards and never used for tuning.",
+ "questions": [
+  {
+   "id": "d01",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How many paid time off days do full-time employees get per year?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "25 days of paid time off"
+    }
+   ],
+   "answer_contains": [
+    "25 days"
+   ]
+  },
+  {
+   "id": "d02",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How many unused days can be carried over into the next year?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "Up to 5 unused days"
+    }
+   ],
+   "answer_contains": [
+    "5 unused days",
+    "5 "
+   ]
+  },
+  {
+   "id": "d03",
+   "split": "dev",
+   "kind": "direct",
+   "question": "By what date must carried-over days be used?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "by March 31"
+    }
+   ],
+   "answer_contains": [
+    "March 31"
+   ]
+  },
+  {
+   "id": "d04",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How many paid sick days does each employee have a year?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "10 paid sick days"
+    }
+   ],
+   "answer_contains": [
+    "10 paid sick days"
+   ]
+  },
+  {
+   "id": "d05",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How long is parental leave for the primary caregiver?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "16 weeks"
+    }
+   ],
+   "answer_contains": [
+    "16 weeks"
+   ]
+  },
+  {
+   "id": "d06",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How many days of bereavement leave follow the death of an immediate family member?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "5 days of paid bereavement leave"
+    }
+   ],
+   "answer_contains": [
+    "5 days"
+   ]
+  },
+  {
+   "id": "d07",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Which days are the core in-office days?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "remote-work",
+     "contains": "Tuesday and Thursday"
+    }
+   ],
+   "answer_contains": [
+    "Tuesday and Thursday"
+   ]
+  },
+  {
+   "id": "d08",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much is the home office stipend?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "remote-work",
+     "contains": "$400"
+    }
+   ],
+   "answer_contains": [
+    "$400"
+   ]
+  },
+  {
+   "id": "d09",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How many days a year can an employee work from another country?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "remote-work",
+     "contains": "up to 20 days"
+    }
+   ],
+   "answer_contains": [
+    "20 days"
+   ]
+  },
+  {
+   "id": "d10",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much is the monthly co-working space allowance?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "remote-work",
+     "contains": "$150 per month"
+    }
+   ],
+   "answer_contains": [
+    "$150"
+   ]
+  },
+  {
+   "id": "d11",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Within how many days must expenses be submitted?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "expenses",
+     "contains": "within 30 days"
+    }
+   ],
+   "answer_contains": [
+    "30 days"
+   ]
+  },
+  {
+   "id": "d12",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Up to what amount can a manager approve expenses?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "expenses",
+     "contains": "up to $500"
+    }
+   ],
+   "answer_contains": [
+    "$500"
+   ]
+  },
+  {
+   "id": "d13",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much are client dinners reimbursed per person?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "expenses",
+     "contains": "$120 per person"
+    }
+   ],
+   "answer_contains": [
+    "$120"
+   ]
+  },
+  {
+   "id": "d14",
+   "split": "dev",
+   "kind": "direct",
+   "question": "What is the mileage rate for a personal car?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "expenses",
+     "contains": "$0.67 per mile"
+    }
+   ],
+   "answer_contains": [
+    "$0.67"
+   ]
+  },
+  {
+   "id": "d15",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How far ahead must travel be booked?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "at least 14 days"
+    }
+   ],
+   "answer_contains": [
+    "14 days"
+   ]
+  },
+  {
+   "id": "d16",
+   "split": "dev",
+   "kind": "direct",
+   "question": "What is the nightly hotel limit in New York?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "$220"
+    }
+   ],
+   "answer_contains": [
+    "$220"
+   ]
+  },
+  {
+   "id": "d17",
+   "split": "dev",
+   "kind": "direct",
+   "question": "What is the per-diem for international trips?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "$75 per day"
+    }
+   ],
+   "answer_contains": [
+    "$75"
+   ]
+  },
+  {
+   "id": "d18",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How long must a passport be valid for international travel?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "at least 6 months"
+    }
+   ],
+   "answer_contains": [
+    "6 months"
+   ]
+  },
+  {
+   "id": "d19",
+   "split": "dev",
+   "kind": "direct",
+   "question": "After how many minutes do laptops lock automatically?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "security",
+     "contains": "lock automatically after 5 minutes"
+    }
+   ],
+   "answer_contains": [
+    "5 minutes"
+   ]
+  },
+  {
+   "id": "d20",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Within how many hours must a lost device be reported?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "security",
+     "contains": "within 2 hours"
+    }
+   ],
+   "answer_contains": [
+    "2 hours"
+   ]
+  },
+  {
+   "id": "d21",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How quickly must critical security patches be installed?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "security",
+     "contains": "within 48 hours"
+    }
+   ],
+   "answer_contains": [
+    "48 hours"
+   ]
+  },
+  {
+   "id": "d22",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How soon must a SEV1 incident get a response?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "incident-response",
+     "contains": "within 15 minutes"
+    }
+   ],
+   "answer_contains": [
+    "15 minutes"
+   ]
+  },
+  {
+   "id": "d23",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much is the on-call stipend?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "incident-response",
+     "contains": "$150 for each week"
+    }
+   ],
+   "answer_contains": [
+    "$150"
+   ]
+  },
+  {
+   "id": "d24",
+   "split": "dev",
+   "kind": "direct",
+   "question": "When is a postmortem due after a SEV1 incident?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "incident-response",
+     "contains": "within 5 business days"
+    }
+   ],
+   "answer_contains": [
+    "5 business days"
+   ]
+  },
+  {
+   "id": "d25",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How soon must customers be notified of a data breach?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "incident-response",
+     "contains": "within 72 hours"
+    }
+   ],
+   "answer_contains": [
+    "72 hours"
+   ]
+  },
+  {
+   "id": "d26",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How long is the probationary period?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "onboarding",
+     "contains": "first 90 days"
+    }
+   ],
+   "answer_contains": [
+    "90 days"
+   ]
+  },
+  {
+   "id": "d27",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Which laptops can new hires choose between?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "onboarding",
+     "contains": "MacBook Pro and a ThinkPad X1"
+    }
+   ],
+   "answer_contains": [
+    "MacBook",
+    "ThinkPad"
+   ]
+  },
+  {
+   "id": "d28",
+   "split": "dev",
+   "kind": "direct",
+   "question": "What is the annual learning budget?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "benefits",
+     "contains": "$1,200 per year"
+    }
+   ],
+   "answer_contains": [
+    "$1,200"
+   ]
+  },
+  {
+   "id": "d29",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Over how many years do stock options vest?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "benefits",
+     "contains": "vest over 4 years"
+    }
+   ],
+   "answer_contains": [
+    "4 years"
+   ]
+  },
+  {
+   "id": "d30",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much is the referral bonus?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "benefits",
+     "contains": "$2,000"
+    }
+   ],
+   "answer_contains": [
+    "$2,000"
+   ]
+  },
+  {
+   "id": "d31",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much does the Brindle Notes Pro plan cost per month?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "$8 per month"
+    }
+   ],
+   "answer_contains": [
+    "$8"
+   ]
+  },
+  {
+   "id": "d32",
+   "split": "dev",
+   "kind": "direct",
+   "question": "How much storage does Brindle Sync include for free?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "2 GB of storage for free"
+    }
+   ],
+   "answer_contains": [
+    "2 GB"
+   ]
+  },
+  {
+   "id": "d33",
+   "split": "dev",
+   "kind": "direct",
+   "question": "What is the company mascot?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "about-us",
+     "contains": "purple otter named Brindle"
+    }
+   ],
+   "answer_contains": [
+    "purple otter"
+   ]
+  },
+  {
+   "id": "d34",
+   "split": "dev",
+   "kind": "direct",
+   "question": "Who founded Brindle Labs?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "about-us",
+     "contains": "founded in 2016 in Lisbon by Marisol Quade"
+    }
+   ],
+   "answer_contains": [
+    "Marisol Quade"
+   ]
+  },
+  {
+   "id": "d35",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "How many vacation days do new full-time staff receive each year?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "25 days of paid time off"
+    }
+   ],
+   "answer_contains": [
+    "25 days"
+   ]
+  },
+  {
+   "id": "d36",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "Who is the CEO?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "about-us",
+     "contains": "chief executive officer"
+    }
+   ],
+   "answer_contains": [
+    "Quade"
+   ]
+  },
+  {
+   "id": "d37",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "What is the maximum nightly rate for a hotel in Singapore?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "$220"
+    }
+   ],
+   "answer_contains": [
+    "$220"
+   ]
+  },
+  {
+   "id": "d38",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "When do salaries get paid each month?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "onboarding",
+     "contains": "last working day of each month"
+    }
+   ],
+   "answer_contains": [
+    "last working day"
+   ]
+  },
+  {
+   "id": "d39",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "Is a doctor's note needed for a short illness?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "only needed after more than 3 consecutive sick days"
+    }
+   ],
+   "answer_contains": [
+    "3 consecutive"
+   ]
+  },
+  {
+   "id": "d40",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "Can I expense an alcoholic drink at a team lunch?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "expenses",
+     "contains": "Alcohol is reimbursed only at client dinners"
+    }
+   ],
+   "answer_contains": [
+    "client dinners"
+   ]
+  },
+  {
+   "id": "d41",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "What is the hotel limit in Tokyo?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "$160 everywhere else"
+    }
+   ],
+   "answer_contains": [
+    "$160"
+   ]
+  },
+  {
+   "id": "d42",
+   "split": "dev",
+   "kind": "paraphrase",
+   "question": "Which software is required for storing work passwords?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "security",
+     "contains": "Vaultwise password manager"
+    }
+   ],
+   "answer_contains": [
+    "Vaultwise"
+   ]
+  },
+  {
+   "id": "d43",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "What is the capital of France?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "d44",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "What is the CEO's salary?",
+   "answerable": false,
+   "note": "salary of the CEO is not stated"
+  },
+  {
+   "id": "d45",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "How many days of leave do employees get for moving house?",
+   "answerable": false,
+   "note": "leave types exist, this one does not"
+  },
+  {
+   "id": "d46",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "Does Brindle Labs provide free lunch in the office?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "d47",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "What is the price of the 1 TB Brindle Sync plan?",
+   "answerable": false,
+   "note": "storage prices exist, this plan does not"
+  },
+  {
+   "id": "d48",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "How many employees work in the Denver office?",
+   "answerable": false,
+   "note": "Denver exists; headcount per office is not stated"
+  },
+  {
+   "id": "d49",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "What programming languages does Brindle Labs use?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "d50",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "Who won the football world cup in 2022?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "d51",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "When was Brindle Notes first released?",
+   "answerable": false,
+   "note": "founding year exists; release date does not"
+  },
+  {
+   "id": "d52",
+   "split": "dev",
+   "kind": "unanswerable",
+   "question": "What is the dress code at the office?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "h01",
+   "split": "held_out",
+   "kind": "paraphrase",
+   "question": "How many weeks of parental leave does the second parent get?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "time-off",
+     "contains": "8 weeks of fully paid leave"
+    }
+   ],
+   "answer_contains": [
+    "8 weeks"
+   ]
+  },
+  {
+   "id": "h02",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "What is the nightly hotel limit outside the tier-one cities?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "$160 everywhere else"
+    }
+   ],
+   "answer_contains": [
+    "$160"
+   ]
+  },
+  {
+   "id": "h03",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "Who has to approve spending of more than $5,000?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "expenses",
+     "contains": "needs a vice president"
+    }
+   ],
+   "answer_contains": [
+    "vice president"
+   ]
+  },
+  {
+   "id": "h04",
+   "split": "held_out",
+   "kind": "paraphrase",
+   "question": "Which day of the week has no meetings?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "remote-work",
+     "contains": "Wednesdays are meeting-free"
+    }
+   ],
+   "answer_contains": [
+    "Wednesday"
+   ]
+  },
+  {
+   "id": "h05",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "How long are files in a deleted folder kept in Brindle Sync?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "kept for 30 days"
+    }
+   ],
+   "answer_contains": [
+    "30 days"
+   ]
+  },
+  {
+   "id": "h06",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "How much does the Team plan cost per user?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "$12 per user per month"
+    }
+   ],
+   "answer_contains": [
+    "$12"
+   ]
+  },
+  {
+   "id": "h07",
+   "split": "held_out",
+   "kind": "paraphrase",
+   "question": "When is customer support available?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "Monday to Friday, 08:00 to 18:00 UTC"
+    }
+   ],
+   "answer_contains": [
+    "Monday to Friday"
+   ]
+  },
+  {
+   "id": "h08",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "What uptime does the service target?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "99.9% uptime"
+    }
+   ],
+   "answer_contains": [
+    "99.9%"
+   ]
+  },
+  {
+   "id": "h09",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "What share of the health insurance premium is paid for dependents?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "benefits",
+     "contains": "70% for dependents"
+    }
+   ],
+   "answer_contains": [
+    "70%"
+   ]
+  },
+  {
+   "id": "h10",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "How much of salary does the company match for 401(k) contributions?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "benefits",
+     "contains": "up to 4% of salary"
+    }
+   ],
+   "answer_contains": [
+    "4%"
+   ]
+  },
+  {
+   "id": "h11",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "How often are laptops replaced?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "onboarding",
+     "contains": "replaced every 4 years"
+    }
+   ],
+   "answer_contains": [
+    "4 years"
+   ]
+  },
+  {
+   "id": "h12",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "When is Otter Day?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "about-us",
+     "contains": "first Friday of June"
+    }
+   ],
+   "answer_contains": [
+    "first Friday of June"
+   ]
+  },
+  {
+   "id": "h13",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "Who runs the call during a SEV1 incident?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "incident-response",
+     "contains": "names an incident commander"
+    }
+   ],
+   "answer_contains": [
+    "incident commander"
+   ]
+  },
+  {
+   "id": "h14",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "How should suspicious emails be reported?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "security",
+     "contains": "Report Phish button"
+    }
+   ],
+   "answer_contains": [
+    "Report Phish"
+   ]
+  },
+  {
+   "id": "h15",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "How often is the status page updated during a SEV1?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "incident-response",
+     "contains": "every 30 minutes"
+    }
+   ],
+   "answer_contains": [
+    "30 minutes"
+   ]
+  },
+  {
+   "id": "h16",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "Is premium economy allowed on long flights?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "travel-policy",
+     "contains": "Premium economy is allowed for flights of 6 hours or longer"
+    }
+   ],
+   "answer_contains": [
+    "6 hours"
+   ]
+  },
+  {
+   "id": "h17",
+   "split": "held_out",
+   "kind": "paraphrase",
+   "question": "What does the buddy assigned to a new hire do?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "onboarding",
+     "contains": "answers questions for the first three months"
+    }
+   ],
+   "answer_contains": [
+    "three months"
+   ]
+  },
+  {
+   "id": "h18",
+   "split": "held_out",
+   "kind": "paraphrase",
+   "question": "What must engineers with production access use for multi-factor authentication?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "security",
+     "contains": "hardware security key"
+    }
+   ],
+   "answer_contains": [
+    "hardware security key"
+   ]
+  },
+  {
+   "id": "h19",
+   "split": "held_out",
+   "kind": "direct",
+   "question": "Which platforms do the products run on?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "product-faq",
+     "contains": "macOS, Windows, iOS, Android"
+    }
+   ],
+   "answer_contains": [
+    "macOS"
+   ]
+  },
+  {
+   "id": "h20",
+   "split": "held_out",
+   "kind": "paraphrase",
+   "question": "Who has to approve fully remote work?",
+   "answerable": true,
+   "evidence": [
+    {
+     "doc": "remote-work",
+     "contains": "approval of a director"
+    }
+   ],
+   "answer_contains": [
+    "director"
+   ]
+  },
+  {
+   "id": "h21",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "What is the maximum number of dependents covered by the health insurance?",
+   "answerable": false,
+   "note": "dependents are mentioned but no maximum"
+  },
+  {
+   "id": "h22",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "Does Brindle Labs have a gym in the office?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "h23",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "What is the headcount of the Singapore office?",
+   "answerable": false,
+   "note": "Singapore exists; its headcount does not"
+  },
+  {
+   "id": "h24",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "What was the company's revenue last year?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "h25",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "How do I reset my Brindle Notes password?",
+   "answerable": false,
+   "note": "the product is mentioned; password resets are not"
+  },
+  {
+   "id": "h26",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "Which cloud provider hosts Brindle Sync?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "h27",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "What is the notice period for resigning after the probation period?",
+   "answerable": false,
+   "note": "probation notice exists; later notice does not"
+  },
+  {
+   "id": "h28",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "Is smoking allowed in the Lisbon office?",
+   "answerable": false,
+   "note": ""
+  },
+  {
+   "id": "h29",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "What is the mascot's favourite food?",
+   "answerable": false,
+   "note": "the canary mascot exists; its food does not"
+  },
+  {
+   "id": "h30",
+   "split": "held_out",
+   "kind": "unanswerable",
+   "question": "Who is the head of marketing?",
+   "answerable": false,
+   "note": ""
+  }
+ ]
+}

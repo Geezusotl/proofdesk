@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProofDesk</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<a class="skip" href="#question">Skip to the question box</a>
+
+<header class="bar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true">
+      <rect x="3" y="2" width="22" height="24" rx="3" fill="#f8fafb"/>
+      <rect x="7" y="8" width="14" height="4" rx="1" fill="#f4d548"/>
+      <rect x="7" y="15" width="14" height="2" rx="1" fill="#26343f" opacity=".45"/>
+      <rect x="7" y="19" width="9" height="2" rx="1" fill="#26343f" opacity=".45"/>
+    </svg>
+    <span class="name">ProofDesk</span>
+    <span class="tag">Ask your documents. Check every answer.</span>
+  </div>
+  <div class="bar-right">
+    <span id="model-badge" class="badge" title=""></span>
+    <button id="guide-open" class="ghost" type="button">Guide</button>
+  </div>
+</header>
+
+<main class="desk">
+  <nav class="docs" aria-label="Documents">
+    <div class="docs-head">
+      <h2>Documents</h2>
+      <button id="add-open" class="ghost small" type="button">Add document</button>
+    </div>
+    <ul id="doc-list" class="doc-list"></ul>
+    <p id="docs-note" class="docs-note"></p>
+  </nav>
+
+  <section class="ask" aria-label="Ask and answer">
+    <form id="ask-form" class="sheet question-sheet" autocomplete="off">
+      <label for="question">Your question</label>
+      <textarea id="question" rows="2" maxlength="1000" placeholder="Type a question about the documents"></textarea>
+      <div class="ask-row">
+        <div id="examples" class="examples" aria-label="Example questions"></div>
+        <button id="ask-btn" class="primary" type="submit">Ask</button>
+      </div>
+    </form>
+
+    <div id="answer-area" aria-live="polite">
+      <div id="empty" class="sheet empty">
+        <h2>Nothing asked yet</h2>
+        <p>Ask a question and the answer appears here, with a numbered source after every claim. Click a number to open the exact sentence in the document.</p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="evidence" aria-label="Evidence">
+    <div class="sheet page">
+      <div class="page-head">
+        <div id="page-title" class="page-title">Evidence</div>
+        <div id="page-note" class="page-note">Click a source number in an answer, or pick a document, to read it here.</div>
+      </div>
+      <div id="page-body" class="page-body" tabindex="0"></div>
+    </div>
+  </aside>
+</main>
+
+<section id="guide" class="guide" role="region" aria-label="Guide" hidden>
+  <div class="guide-top">
+    <strong id="guide-step-label"></strong>
+    <button id="guide-close" class="ghost small" type="button" aria-label="Close guide">Close</button>
+  </div>
+  <h3 id="guide-title"></h3>
+  <p id="guide-text"></p>
+  <div class="guide-actions">
+    <button id="guide-do" class="primary small" type="button"></button>
+    <span class="spacer"></span>
+    <button id="guide-back" class="ghost small" type="button">Back</button>
+    <button id="guide-next" class="ghost small" type="button">Next</button>
+  </div>
+</section>
+
+<dialog id="add-dialog" class="dialog" aria-labelledby="add-title">
+  <form id="add-form" method="dialog">
+    <h2 id="add-title">Add a document</h2>
+    <p class="hint">Paste text or choose a .txt or .md file. It stays in memory until you stop the server.</p>
+    <label for="add-name">Title</label>
+    <input id="add-name" type="text" maxlength="120" placeholder="For example: Lunch rota">
+    <label for="add-text">Text</label>
+    <textarea id="add-text" rows="10" placeholder="Paste the document here"></textarea>
+    <label for="add-file">Or choose a file</label>
+    <input id="add-file" type="file" accept=".txt,.md,.markdown,text/plain,text/markdown">
+    <p id="add-error" class="error" role="alert" hidden></p>
+    <div class="dialog-actions">
+      <button id="add-cancel" class="ghost" type="button">Cancel</button>
+      <button id="add-save" class="primary" type="submit">Add document</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
