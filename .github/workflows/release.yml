@@ -28,11 +28,15 @@ jobs:
         run: |
           pyinstaller --onefile --name ProofDesk --paths src --collect-data proofdesk \
             --distpath dist packaging/launcher.py
-      - name: Check the built app works
+      - name: Check 1 - app starts
         shell: bash
-        run: |
-          ./dist/ProofDesk --version
-          ./dist/ProofDesk ask "What is the company mascot?" | grep -i "purple otter"
+        run: ./dist/ProofDesk --version
+      - name: Check 2 - app finds its bundled sample documents
+        shell: bash
+        run: ./dist/ProofDesk ask "What is the company mascot?" > ask.txt 2>&1 || { cat ask.txt; exit 1; }
+      - name: Check 3 - answer is right
+        shell: bash
+        run: cat ask.txt; grep -i "purple otter" ask.txt
       - name: Zip it
         shell: bash
         run: |
