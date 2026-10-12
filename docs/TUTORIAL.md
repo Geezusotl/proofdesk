@@ -4,6 +4,10 @@ About 10 minutes. You need Python 3.10 or newer. Nothing else to install and no 
 
 ## 1. Start it
 
+Not comfortable with a terminal? Use the download in [INSTALL.md](INSTALL.md) and skip to step 2.
+
+For developers:
+
 ```
 git clone https://github.com/Geezusotl/proofdesk
 cd proofdesk

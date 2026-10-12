@@ -40,7 +40,7 @@ def _common(p, docs=True):
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="proofdesk", description="Ask questions about your documents and check every answer against its source.")
     parser.add_argument("--version", action="version", version=f"proofdesk {__version__}")
-    sub = parser.add_subparsers(dest="command", required=True)
+    sub = parser.add_subparsers(dest="command")
 
     serve = sub.add_parser("serve", help="open the web interface")
     _common(serve)
@@ -69,14 +69,20 @@ def _cmd_serve(args) -> int:
     from .server import App, create_server  # imported late so 'ask' stays fast
     docs, sample = _documents(args)
     app = App(docs, _model(args), sample=sample)
-    server = create_server(app, args.host, args.port)
+    try:
+        server = create_server(app, args.host, args.port)
+    except OSError:
+        if args.port == 0:
+            raise
+        print(f"Port {args.port} is busy (is ProofDesk already open?). Picking another one.")
+        server = create_server(app, args.host, 0)
     port = server.server_address[1]
     url = f"http://{'127.0.0.1' if args.host in ('127.0.0.1', 'localhost') else args.host}:{port}/"
     print(f"ProofDesk {__version__} is running at {url}")
     print(f"  documents: {len(docs)} ({'bundled sample handbook' if sample else args.docs}), model: {app.model.name}")
     if args.host not in ("127.0.0.1", "localhost", "::1"):
         print("  WARNING: this address is reachable from other computers and there is no login.")
-    print("  Press Ctrl+C to stop.")
+    print("  Keep this window open while you use ProofDesk. Close it (or press Ctrl+C) to stop.")
     if not args.no_browser:
         webbrowser.open(url)
     try:
@@ -142,6 +148,9 @@ def _cmd_sample(args) -> int:
 def main(argv: Optional[Sequence[str]] = None) -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(errors="replace")
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if not argv or argv[0].startswith("--") and argv[0] not in ("--version", "-h", "--help"):
+        argv = ["serve"] + argv  # double-clicking the app (no arguments) opens the interface
     args = build_parser().parse_args(argv)
     try:
         return {"serve": _cmd_serve, "ask": _cmd_ask, "eval": _cmd_eval, "sample": _cmd_sample}[args.command](args)

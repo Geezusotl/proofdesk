@@ -221,3 +221,45 @@ class CliAndEvalTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DoubleClickTests(unittest.TestCase):
+    """The downloadable app is started with no arguments and must open the interface."""
+
+    def routed(self, argv):
+        from unittest import mock
+        with mock.patch.object(cli, "_cmd_serve", return_value=0) as serve:
+            cli.main(argv)
+        return serve.call_args[0][0] if serve.called else None
+
+    def test_no_arguments_serves(self):
+        self.assertEqual(self.routed([]).command, "serve")
+
+    def test_flags_only_serves(self):
+        args = self.routed(["--no-browser", "--port", "0"])
+        self.assertEqual((args.command, args.port, args.no_browser), ("serve", 0, True))
+
+    def test_version_still_works(self):
+        with contextlib.redirect_stdout(io.StringIO()), self.assertRaises(SystemExit) as cm:
+            cli.main(["--version"])
+        self.assertEqual(cm.exception.code, 0)
+
+    def test_busy_port_falls_back(self):
+        import socket
+        from unittest import mock
+        busy = socket.socket(); busy.bind(("127.0.0.1", 0)); busy.listen(1)
+        port = busy.getsockname()[1]
+        self.addCleanup(busy.close)
+        real = cli.__dict__.get("webbrowser")
+        with mock.patch("webbrowser.open"), mock.patch("proofdesk.server.ThreadingHTTPServer.serve_forever",
+                                                       side_effect=KeyboardInterrupt), \
+                contextlib.redirect_stdout(io.StringIO()) as out:
+            code = cli.main(["serve", "--port", str(port)])
+        self.assertEqual(code, 0)
+        self.assertIn("busy", out.getvalue())
+
+    def test_launcher_and_scripts_exist(self):
+        for name in ("packaging/launcher.py", "Start ProofDesk.bat", "Start ProofDesk.command", "start-proofdesk.sh",
+                     "docs/INSTALL.md", ".github/workflows/release.yml"):
+            self.assertTrue((ROOT / name).is_file(), name)
+        self.assertTrue(os.access(ROOT / "Start ProofDesk.command", os.X_OK))
